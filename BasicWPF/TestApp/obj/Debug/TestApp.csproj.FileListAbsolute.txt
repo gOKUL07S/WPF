@@ -1,0 +1,7 @@
+C:\Users\Lucid\source\repos\BasicWPF\TestApp\bin\Debug\TestApp.exe.config
+C:\Users\Lucid\source\repos\BasicWPF\TestApp\bin\Debug\TestApp.exe
+C:\Users\Lucid\source\repos\BasicWPF\TestApp\bin\Debug\TestApp.pdb
+C:\Users\Lucid\source\repos\BasicWPF\TestApp\obj\Debug\TestApp.csprojAssemblyReference.cache
+C:\Users\Lucid\source\repos\BasicWPF\TestApp\obj\Debug\TestApp.csproj.CoreCompileInputs.cache
+C:\Users\Lucid\source\repos\BasicWPF\TestApp\obj\Debug\TestApp.exe
+C:\Users\Lucid\source\repos\BasicWPF\TestApp\obj\Debug\TestApp.pdb

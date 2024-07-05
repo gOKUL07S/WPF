@@ -1,0 +1,17 @@
+C:\Users\Lucid\source\repos\BasicWPF\ImageViewer\bin\Debug\ImageViewer.exe.config
+C:\Users\Lucid\source\repos\BasicWPF\ImageViewer\bin\Debug\ImageViewer.exe
+C:\Users\Lucid\source\repos\BasicWPF\ImageViewer\bin\Debug\ImageViewer.pdb
+C:\Users\Lucid\source\repos\BasicWPF\ImageViewer\obj\Debug\ImageViewer.csprojAssemblyReference.cache
+C:\Users\Lucid\source\repos\BasicWPF\ImageViewer\obj\Debug\CroppedImage.g.cs
+C:\Users\Lucid\source\repos\BasicWPF\ImageViewer\obj\Debug\MainWindow.g.cs
+C:\Users\Lucid\source\repos\BasicWPF\ImageViewer\obj\Debug\App.g.cs
+C:\Users\Lucid\source\repos\BasicWPF\ImageViewer\obj\Debug\ImageViewer_MarkupCompile.cache
+C:\Users\Lucid\source\repos\BasicWPF\ImageViewer\obj\Debug\ImageViewer_MarkupCompile.lref
+C:\Users\Lucid\source\repos\BasicWPF\ImageViewer\obj\Debug\CroppedImage.baml
+C:\Users\Lucid\source\repos\BasicWPF\ImageViewer\obj\Debug\MainWindow.baml
+C:\Users\Lucid\source\repos\BasicWPF\ImageViewer\obj\Debug\ImageViewer.g.resources
+C:\Users\Lucid\source\repos\BasicWPF\ImageViewer\obj\Debug\ImageViewer.Properties.Resources.resources
+C:\Users\Lucid\source\repos\BasicWPF\ImageViewer\obj\Debug\ImageViewer.csproj.GenerateResource.cache
+C:\Users\Lucid\source\repos\BasicWPF\ImageViewer\obj\Debug\ImageViewer.csproj.CoreCompileInputs.cache
+C:\Users\Lucid\source\repos\BasicWPF\ImageViewer\obj\Debug\ImageViewer.exe
+C:\Users\Lucid\source\repos\BasicWPF\ImageViewer\obj\Debug\ImageViewer.pdb

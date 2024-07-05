@@ -1,0 +1,15 @@
+D:\Sharukhss\To-Do List\To-Do List\bin\Debug\To-Do List.exe.config
+D:\Sharukhss\To-Do List\To-Do List\bin\Debug\To-Do List.exe
+D:\Sharukhss\To-Do List\To-Do List\bin\Debug\To-Do List.pdb
+D:\Sharukhss\To-Do List\To-Do List\obj\Debug\To-Do List.csprojAssemblyReference.cache
+D:\Sharukhss\To-Do List\To-Do List\obj\Debug\MainWindow.g.cs
+D:\Sharukhss\To-Do List\To-Do List\obj\Debug\App.g.cs
+D:\Sharukhss\To-Do List\To-Do List\obj\Debug\To-Do List_MarkupCompile.cache
+D:\Sharukhss\To-Do List\To-Do List\obj\Debug\To-Do List_MarkupCompile.lref
+D:\Sharukhss\To-Do List\To-Do List\obj\Debug\MainWindow.baml
+D:\Sharukhss\To-Do List\To-Do List\obj\Debug\To-Do List.g.resources
+D:\Sharukhss\To-Do List\To-Do List\obj\Debug\To_Do_List.Properties.Resources.resources
+D:\Sharukhss\To-Do List\To-Do List\obj\Debug\To-Do List.csproj.GenerateResource.cache
+D:\Sharukhss\To-Do List\To-Do List\obj\Debug\To-Do List.csproj.CoreCompileInputs.cache
+D:\Sharukhss\To-Do List\To-Do List\obj\Debug\To-Do List.exe
+D:\Sharukhss\To-Do List\To-Do List\obj\Debug\To-Do List.pdb

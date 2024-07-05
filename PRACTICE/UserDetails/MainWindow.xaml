@@ -1,0 +1,173 @@
+﻿<Window x:Class="UserDetails.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UserDetails"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="600"
+        Width="800"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Window.Resources>
+        <Style x:Key="CurvedButton"
+               TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
+                                CornerRadius="15"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                Background="{TemplateBinding Background}"
+                                BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver"
+                                     Value="True">
+                                <Setter TargetName="border"
+                                        Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="0.5,1"
+                                                             StartPoint="0.4,0">
+                                            <GradientStop Color="#00C9FF" />
+                                            <GradientStop Color="#FF07D192"
+                                                          Offset="0.813" />
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--<Style x:Key="OptionLabel"
+               TargetType="Label">
+            <Setter Property="Foreground"
+        </Style>-->
+    </Window.Resources>
+    <Grid>
+        <Canvas Name="Login"
+                Visibility="Visible">
+            <Canvas.Background>
+                <LinearGradientBrush EndPoint="1,1"
+                                     StartPoint="0,0">
+                    <GradientStop Color="#00C9FF" />
+                    <GradientStop Color="#FF07D192"
+                                  Offset="0.9" />
+                </LinearGradientBrush>
+            </Canvas.Background>
+            <Border x:Name="loginBorder"
+                    CornerRadius="12"
+                    Height="400"
+                    Width="300"
+                    Canvas.Left="250"
+                    Canvas.Top="75"
+                    Background="White">
+                <StackPanel>
+                    <Label Height="75"
+                           HorizontalContentAlignment="Center"
+                           VerticalContentAlignment="Center">
+                        <StackPanel>
+                            <!--Width="200"-->
+                            <TextBlock FontFamily="Segoe UI Black"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       FontSize="30">Login</TextBlock>
+                            <Border BorderBrush="Silver"
+                                    BorderThickness="0,1,0,0"
+                                    Margin="0,8" />
+                        </StackPanel>
+                    </Label>
+                    <Canvas Height="320">
+                        <Label Canvas.Left="36"
+                               Canvas.Top="13"
+                               FontWeight="ExtraLight">Username</Label>
+                        <TextBox Canvas.Left="40"
+                                 Canvas.Top="40"
+                                 FontSize="16"
+                                 BorderThickness="0"
+                                 Width="220"
+                                 MaxLength="30" />
+                        <Border BorderBrush="Silver"
+                                BorderThickness="0,1,0,0"
+                                Margin="0,8"
+                                Canvas.Left="40"
+                                Canvas.Top="58"
+                                Width="220" />
+                        <Label Canvas.Left="36"
+                               Canvas.Top="83"
+                               FontWeight="ExtraLight">Password</Label>
+                        <PasswordBox Canvas.Left="40"
+                                     Canvas.Top="110"
+                                     FontSize="16"
+                                     BorderThickness="0"
+                                     Width="220"
+                                     MaxLength="30"
+                                     PasswordChar="*" />
+                        <Border BorderBrush="Silver"
+                                BorderThickness="0,1,0,0"
+                                Margin="0,8"
+                                Canvas.Left="40"
+                                Canvas.Top="128"
+                                Width="220" />
+                        <Label Canvas.Right="40"
+                               Canvas.Top="150"
+                               Content="ForgetPassword?"
+                               Background="White"
+                               BorderThickness="0"
+                               FontWeight="UltraLight"
+                               MouseLeftButtonDown="OnForgetPasswordLblClicked" />
+                        <Border Canvas.Right="46"
+                                Canvas.Top="170"
+                                BorderThickness="0 1 0 0"
+                                BorderBrush="Silver"
+                                Width="84" />
+
+                        <Button Style="{StaticResource CurvedButton}"
+                                Width="100"
+                                Height="30"
+                                Canvas.Left="100"
+                                Canvas.Top="200"
+                                Content="Login"
+                                Click="OnLoginBtnClicked">
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0.5,1"
+                                                     StartPoint="0.4,0">
+                                    <GradientStop Color="#FF07D192" />
+                                    <GradientStop Color="#00C9FF"
+                                                  Offset="0.9" />
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+                        <Label Content="Create User"
+                               Background="White"
+                               FontSize="12"
+                               Canvas.Bottom="5"
+                               Canvas.Left="120"
+                               BorderThickness="0"
+                               FontWeight="UltraLight"
+                               MouseLeftButtonDown="OnCreateUserLblClicked" />
+                        <Border Canvas.Bottom="5"
+                                Canvas.Left="123"
+                                BorderThickness="0 1 0 0"
+                                BorderBrush="Silver"
+                                Width="62" />
+
+                    </Canvas>
+
+                </StackPanel>
+
+            </Border>
+
+        </Canvas>
+
+        <DockPanel Visibility="Collapsed">
+            <Label DockPanel.Dock="Right">Hello</Label>
+        </DockPanel>
+    </Grid>
+</Window>

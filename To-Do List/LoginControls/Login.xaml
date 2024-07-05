@@ -1,0 +1,25 @@
+﻿<UserControl x:Name="Usercont" x:Class="LoginControls.Login"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LoginControls"
+             mc:Ignorable="d" Height="115" Width="460" Background="Transparent">
+    <UserControl.Resources>
+        <ResourceDictionary>
+        <Style  x:Key="BorderStyle" TargetType="Border">
+            <Setter Property="Background" Value="Black"/>
+        </Style>
+        <ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary Source="Dictionary1.xaml"/>
+        </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid x:Name="grid" Background="White" Margin="0,0,5,10" RenderTransformOrigin="0.5,0.5">
+        <Border Style="{StaticResource BorderStyle}" Name="border" CornerRadius="20" Margin="0,10,25,30">
+            <TextBox Style="{StaticResource TextBoxsty}" Text="{Binding MyEmail,RelativeSource={RelativeSource AncestorType=local:Login}}"  x:Name="textbox" HorizontalAlignment="Left" Height="50" Margin="7,7,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="412" FontSize="36" FontFamily="Segoe UI Black" VerticalScrollBarVisibility="Auto" GotFocus="textbox_GotFocus"/>
+        </Border>
+        <Label Name="label" FontSize="15" FontFamily="Segoe UI Black" Content="" HorizontalAlignment="Left" Margin="47,2,0,0" VerticalAlignment="Top" Background="White" Width="18" Visibility="Hidden"/>
+    </Grid>
+</UserControl>

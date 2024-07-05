@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="FirstWPFProject.ToggleButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:FirstWPFProject"
+             mc:Ignorable="d"
+             d:DesignHeight="30"
+             d:DesignWidth="100">
+
+    <Canvas x:Name="canvas"
+            MouseDown="OnCanvasMouseDown">
+        <local:ToggleButton Color="Red" />
+        <Border Background="Red"
+                CornerRadius="15"
+                Height="30"
+                Width="100">
+        </Border>
+        <Ellipse Fill="White"
+                 Height="25"
+                 Width="25" 
+                 Canvas.Left="2"
+                 Canvas.Top="2.5"/>
+    </Canvas>
+</UserControl>

@@ -1,0 +1,42 @@
+﻿<Window x:Class="UserManagement.TestWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UserManagement"
+        mc:Ignorable="d"
+        Title="TestWindow" Height="450" Width="800">
+    <Window.Resources>
+        <local:MultiTextBoxValueConvetor x:Key="tbMultiValueConvertor" />
+    </Window.Resources>
+    <StackPanel>
+        <TextBox Name="tb11"></TextBox>
+        <TextBox Name="tb12"></TextBox>
+        <Button Height="20">
+            <Button.IsEnabled>
+                <MultiBinding Converter="{StaticResource tbMultiValueConvertor}">
+                    <Binding Path="Text"
+                             ElementName="tb11" />
+                    <Binding Path="Text"
+                             ElementName="tb12" />
+                </MultiBinding>
+            </Button.IsEnabled>
+        </Button>
+        <Border Height="30" Background="HotPink"></Border>
+        <TextBox Name="tb21"></TextBox>
+        <TextBox Name="tb22"></TextBox>
+        <TextBox Name="tb23"></TextBox>
+        <Button Height="20">
+            <Button.IsEnabled>
+                <MultiBinding Converter="{StaticResource tbMultiValueConvertor}">
+                    <Binding Path="Text"
+                             ElementName="tb21" />
+                    <Binding Path="Text"
+                             ElementName="tb22" />
+                    <Binding Path="Text"
+                             ElementName="tb23" />
+                </MultiBinding>
+            </Button.IsEnabled>
+        </Button>
+    </StackPanel>
+</Window>

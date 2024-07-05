@@ -1,0 +1,15 @@
+D:\Sharukhss\To-Do List\DataBind\bin\Debug\DataBind.exe.config
+D:\Sharukhss\To-Do List\DataBind\bin\Debug\DataBind.exe
+D:\Sharukhss\To-Do List\DataBind\bin\Debug\DataBind.pdb
+D:\Sharukhss\To-Do List\DataBind\obj\Debug\DataBind.csprojAssemblyReference.cache
+D:\Sharukhss\To-Do List\DataBind\obj\Debug\MainWindow.g.cs
+D:\Sharukhss\To-Do List\DataBind\obj\Debug\App.g.cs
+D:\Sharukhss\To-Do List\DataBind\obj\Debug\DataBind_MarkupCompile.cache
+D:\Sharukhss\To-Do List\DataBind\obj\Debug\DataBind_MarkupCompile.lref
+D:\Sharukhss\To-Do List\DataBind\obj\Debug\MainWindow.baml
+D:\Sharukhss\To-Do List\DataBind\obj\Debug\DataBind.g.resources
+D:\Sharukhss\To-Do List\DataBind\obj\Debug\DataBind.Properties.Resources.resources
+D:\Sharukhss\To-Do List\DataBind\obj\Debug\DataBind.csproj.GenerateResource.cache
+D:\Sharukhss\To-Do List\DataBind\obj\Debug\DataBind.csproj.CoreCompileInputs.cache
+D:\Sharukhss\To-Do List\DataBind\obj\Debug\DataBind.exe
+D:\Sharukhss\To-Do List\DataBind\obj\Debug\DataBind.pdb

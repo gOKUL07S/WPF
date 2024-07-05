@@ -1,0 +1,194 @@
+﻿<Window x:Class="ImageViewer2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ImageViewer2"
+        mc:Ignorable="d"
+        Height="429.976"
+        Width="419.121"
+        MinWidth="450"
+        MinHeight="450"
+        MouseLeftButtonUp="OnWindowMouseLeftButtonUp"
+        WindowState="Maximized"
+        WindowStyle="None">
+    <Window.Resources>
+        <local:BoolToVisibilityConvertor x:Key="BoolToVisConverter" />
+        <local:VisibilityValueConvertor x:Key="VisValueConvertor" />
+        <ControlTemplate x:Key="CircularThumbTemplate"
+                         TargetType="{x:Type Thumb}">
+            <Ellipse Fill="Red"
+                     Stroke="Black"
+                     StrokeThickness="1"
+                     Width="10"
+                     Height="10" />
+        </ControlTemplate>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="30px" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40px" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   MouseDown="SelectLblMouseDown"
+                   Background="LightBlue"
+                   Content="SELECT IMAGE"
+                   FontSize="20"
+                   HorizontalContentAlignment="Center" />
+
+            <Canvas Name="imageCanvas"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Background="Black"
+                    MouseDown="OnImageMouseDown"
+                    MouseUp="OnImageMouseUp"
+                    MouseMove="OnImageMouseMove">
+                <Image Name="img"
+                       Source="D:\WP\OBITO_FRIENDS.png"
+                       Margin="0,0,0,0">
+                    <Image.Width>
+                        <Binding Path="ActualWidth"
+                                 RelativeSource="{RelativeSource AncestorType=Canvas}" />
+                    </Image.Width>
+                    <Image.Height>
+                        <Binding Path="ActualHeight"
+                                 RelativeSource="{RelativeSource AncestorType=Canvas}" />
+                    </Image.Height>
+                </Image>
+
+                <Thumb Name="TopThumb"
+                       Width="10"
+                       Height="10"
+                       Cursor="SizeNS"
+                       Panel.ZIndex="100"
+                       Template="{StaticResource CircularThumbTemplate}"
+                       Visibility="{Binding IsRegionSelected , Converter= {StaticResource VisValueConvertor}}"
+                       DragDelta="OnTopThumbDragDelta"/>
+
+                <Thumb Name="BottomThumb"
+                       Width="10"
+                       Height="10"
+                       Cursor="SizeNS"
+                       Panel.ZIndex="100"
+                       Template="{StaticResource CircularThumbTemplate}"
+                       Visibility="{Binding IsRegionSelected , Converter= {StaticResource VisValueConvertor}}"
+                       DragDelta="OnBottomThumbDragDelta"/>
+
+                <Thumb Name="LeftThumb"
+                       Width="10"
+                       Height="10"
+                       Cursor="SizeWE"
+                       Panel.ZIndex="100"
+                       Template="{StaticResource CircularThumbTemplate}"
+                       Visibility="{Binding IsRegionSelected , Converter= {StaticResource VisValueConvertor}}"
+                       DragDelta="OnLeftThumbDragDelta"/>
+
+                <Thumb Name="RightThumb"
+                       Width="10"
+                       Height="10"
+                       Cursor="SizeWE"
+                       Panel.ZIndex="100"
+                       Template="{StaticResource CircularThumbTemplate}"
+                       Visibility="{Binding IsRegionSelected , Converter= {StaticResource VisValueConvertor}}"
+                       DragDelta="OnRightThumbDragDelta"/>
+
+            </Canvas>
+            <ScrollViewer Grid.Row="1"
+                          Grid.Column="1"
+                          VerticalScrollBarVisibility="Auto"
+                          Name="cropimgScrollViewver"
+                          Visibility="{Binding IsChecked, ElementName=CropModeCheckbox, Converter={StaticResource BoolToVisConverter}, ConverterParameter=ScrollViewer }">
+                <VirtualizingStackPanel Name="croppedImagePanel"
+                                        Background="LightBlue">
+                </VirtualizingStackPanel>
+            </ScrollViewer>
+            <Canvas Name="zoomViewCanvas"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Background="LightBlue"
+                    Visibility="{Binding IsChecked, ElementName=CropModeCheckbox, Converter={StaticResource BoolToVisConverter} , ConverterParameter=Canvas}"
+                    IsVisibleChanged="OnZoomViewCanvasVisibleChanged">
+                <Image Canvas.Bottom="0"
+                       Name="zoomViewImg">
+                    <Image.Width>
+                        <Binding Path="ActualWidth"
+                                 RelativeSource="{RelativeSource AncestorType=Canvas}" />
+                    </Image.Width>
+                    <Image.Height>
+                        <Binding Path="ActualWidth"
+                                 RelativeSource="{RelativeSource AncestorType=Canvas}" />
+                    </Image.Height>
+                </Image>
+            </Canvas>
+        </Grid>
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="1">
+            <TextBlock Width="15"
+                       Text="X:"
+                       Height="20"
+                       FontSize="15"
+                       Margin="0 0 10 0" />
+            <TextBlock Width="50"
+                       Name="X"
+                       Height="20"
+                       FontSize="15" />
+            <TextBlock Width="15"
+                       Text="Y:"
+                       Height="20"
+                       FontSize="15"
+                       Margin="10 0 10 0" />
+            <TextBlock Width="50"
+                       Name="Y"
+                       Height="20"
+                       FontSize="15" />
+            <TextBlock Width="20"
+                       Text="X2:"
+                       Height="20"
+                       FontSize="15"
+                       Margin="10 0 10 0" />
+            <TextBlock Width="50"
+                       Name="X2"
+                       Height="20"
+                       FontSize="15" />
+            <TextBlock Width="20"
+                       Text="Y2:"
+                       Height="20"
+                       FontSize="15"
+                       Margin="10 0 10 0" />
+            <TextBlock Width="50"
+                       Name="Y2"
+                       Height="20"
+                       FontSize="15" />
+            <CheckBox Margin="100 0 0 0"
+                      Name="CropModeCheckbox"
+                      IsChecked="False"
+                      Height="20"
+                      FontSize="15">Crop Mode</CheckBox>
+            <CheckBox Margin="200 0 0 0"
+                      Name="selectRegion"
+                      IsChecked="False"
+                      Height="20"
+                      FontSize="15">Select Region</CheckBox>
+            <Button Margin="1010 0 0 0"
+                    Name="Close"
+                    Background="Red"
+                    Content="CLOSE"
+                    Height="30"
+                    Width="70"
+                    FontSize="15"
+                    Click="OnCloseClicked" />
+        </StackPanel>
+    </Grid>
+</Window>

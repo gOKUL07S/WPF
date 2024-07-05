@@ -1,0 +1,17 @@
+D:\GOKUL\WPF\FirstWPFProject\FirstWPFProject\bin\Debug\FirstWPFProject.exe.config
+D:\GOKUL\WPF\FirstWPFProject\FirstWPFProject\bin\Debug\FirstWPFProject.exe
+D:\GOKUL\WPF\FirstWPFProject\FirstWPFProject\bin\Debug\FirstWPFProject.pdb
+D:\GOKUL\WPF\FirstWPFProject\FirstWPFProject\obj\Debug\FirstWPFProject.csprojAssemblyReference.cache
+D:\GOKUL\WPF\FirstWPFProject\FirstWPFProject\obj\Debug\MainWindow.g.cs
+D:\GOKUL\WPF\FirstWPFProject\FirstWPFProject\obj\Debug\App.g.cs
+D:\GOKUL\WPF\FirstWPFProject\FirstWPFProject\obj\Debug\FirstWPFProject_MarkupCompile.cache
+D:\GOKUL\WPF\FirstWPFProject\FirstWPFProject\obj\Debug\FirstWPFProject_MarkupCompile.lref
+D:\GOKUL\WPF\FirstWPFProject\FirstWPFProject\obj\Debug\MainWindow.baml
+D:\GOKUL\WPF\FirstWPFProject\FirstWPFProject\obj\Debug\FirstWPFProject.g.resources
+D:\GOKUL\WPF\FirstWPFProject\FirstWPFProject\obj\Debug\FirstWPFProject.Properties.Resources.resources
+D:\GOKUL\WPF\FirstWPFProject\FirstWPFProject\obj\Debug\FirstWPFProject.csproj.GenerateResource.cache
+D:\GOKUL\WPF\FirstWPFProject\FirstWPFProject\obj\Debug\FirstWPFProject.csproj.CoreCompileInputs.cache
+D:\GOKUL\WPF\FirstWPFProject\FirstWPFProject\obj\Debug\FirstWPFProject.exe
+D:\GOKUL\WPF\FirstWPFProject\FirstWPFProject\obj\Debug\FirstWPFProject.pdb
+D:\GOKUL\WPF\FirstWPFProject\FirstWPFProject\obj\Debug\ToggleButton.g.cs
+D:\GOKUL\WPF\FirstWPFProject\FirstWPFProject\obj\Debug\ToggleButton.baml

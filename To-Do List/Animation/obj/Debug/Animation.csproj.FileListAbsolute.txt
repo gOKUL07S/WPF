@@ -1,0 +1,15 @@
+D:\Sharukhss\To-Do List\Animation\bin\Debug\Animation.exe.config
+D:\Sharukhss\To-Do List\Animation\bin\Debug\Animation.exe
+D:\Sharukhss\To-Do List\Animation\bin\Debug\Animation.pdb
+D:\Sharukhss\To-Do List\Animation\obj\Debug\Animation.csprojAssemblyReference.cache
+D:\Sharukhss\To-Do List\Animation\obj\Debug\MainWindow.g.cs
+D:\Sharukhss\To-Do List\Animation\obj\Debug\App.g.cs
+D:\Sharukhss\To-Do List\Animation\obj\Debug\Animation_MarkupCompile.cache
+D:\Sharukhss\To-Do List\Animation\obj\Debug\Animation_MarkupCompile.lref
+D:\Sharukhss\To-Do List\Animation\obj\Debug\MainWindow.baml
+D:\Sharukhss\To-Do List\Animation\obj\Debug\Animation.g.resources
+D:\Sharukhss\To-Do List\Animation\obj\Debug\Animation.Properties.Resources.resources
+D:\Sharukhss\To-Do List\Animation\obj\Debug\Animation.csproj.GenerateResource.cache
+D:\Sharukhss\To-Do List\Animation\obj\Debug\Animation.csproj.CoreCompileInputs.cache
+D:\Sharukhss\To-Do List\Animation\obj\Debug\Animation.exe
+D:\Sharukhss\To-Do List\Animation\obj\Debug\Animation.pdb

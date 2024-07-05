@@ -1,0 +1,95 @@
+﻿<UserControl x:Class="RegionEditor.ResizableRectangle"
+             x:Name="MainControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:RegionEditor"
+             mc:Ignorable="d"
+             Height="200"
+             Width="200">
+    <UserControl.Resources>
+        <local:SizePercentageConverter x:Key="SizePercentageConverter" />
+
+        <Style TargetType="Thumb">
+            <Setter Property="Height"
+                    Value="16" />
+            <Setter Property="Width"
+                    Value="16" />
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1"
+                                         StartPoint="0.5,0">
+                        <GradientStop Color="#FFFF1010"
+                                      Offset="0.51" />
+                        <GradientStop Color="#FF0A0909"
+                                      Offset="0.531" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Thumb">
+                        <Grid>
+                            <Ellipse Width="{TemplateBinding Width}"
+                                     Height="{TemplateBinding Height}"
+                                     Fill="{TemplateBinding Background}"
+                                     Stroke="{TemplateBinding BorderBrush}"
+                                     StrokeThickness="{TemplateBinding BorderThickness}" />
+                            <Ellipse Width="8"
+                                     Height="8"
+                                     Fill="AliceBlue"
+                                     Stroke="Black"
+                                     StrokeThickness="0.5" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseCaptured"
+                         Value="True">
+                    <Setter Property="Background"
+                            Value="Red" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+    </UserControl.Resources>
+
+    <Canvas ClipToBounds="True">
+        <Rectangle x:Name="SelectionRectangle"
+                   Stroke="Red"
+                   StrokeThickness="2"
+                   Fill="WhiteSmoke"
+                   StrokeDashArray="2,2"
+                   Visibility="Visible"
+                   Height="{Binding ActualHeight, ElementName=MainControl, Converter={StaticResource ResourceKey=SizePercentageConverter}}"
+                   Width="{Binding ActualWidth, ElementName=MainControl, Converter={StaticResource ResourceKey=SizePercentageConverter}}"
+                   Opacity="0.3"
+                   Canvas.Left="2"
+                   Canvas.Top="2" />
+
+        <!--Corner Thumbs-->
+        <Thumb x:Name="TopLeftThumb"
+               Cursor="SizeNWSE"
+               Margin="8" />
+        <Thumb x:Name="TopRightThumb"
+               Cursor="SizeNESW" />
+        <Thumb x:Name="BottomLeftThumb"
+               Cursor="SizeNESW" />
+        <Thumb x:Name="BottomRightThumb"
+               Cursor="SizeNWSE" />
+
+        <!--Side Thumbs-->
+        <Thumb x:Name="TopThumb"
+               Cursor="SizeNS"
+               Margin="0 6 0 0" />
+        <Thumb x:Name="BottomThumb"
+               Cursor="SizeNS" />
+        <Thumb x:Name="LeftThumb"
+               Cursor="SizeWE" />
+        <Thumb x:Name="RightThumb"
+               Cursor="SizeWE" />
+    </Canvas>
+
+</UserControl>
